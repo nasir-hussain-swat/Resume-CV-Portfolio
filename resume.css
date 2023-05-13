@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    color:var(--text-color);
+    font-family: Arial;
+    padding: 10px;
+    background: var(--background-color);
+  }
+  :root{
+    --text-color:rgb(0, 0, 0);
+    --header-color:rgb(240, 239, 239);
+    --background-color:#ffffff;
+    --navbar-color:#333;
+    --footer-color:rgb(231, 230, 230);
+
+  }
+  
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: var(--header-color);
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: var(--navbar-color);
+  }
+  
+ 
+  .rightcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .leftcolumn {
+    border-right:solid 10px var(--background-color);;
+    float: left;
+    width: 25%;
+    background-color: var(--background-color);
+    padding-left: 20px;
+  }
+  
+ 
+  .card {
+    background-color: var(--header-color);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .icon{
+    height: 20px;
+    width: 20px;
+    /* color:rgb(255, 255, 255); */
+  }
+  .profile li{
+    margin-bottom:5px ;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--footer-color);
+    margin-top: 20px;
+    
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
